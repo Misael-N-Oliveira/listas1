@@ -1,0 +1,197 @@
+@charset "utf-8";
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    font-family:sans-serif;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+h1 {
+font-weight: 400;
+color: #ffffff;
+background-color: #0000007a;
+border-radius: 180px;
+text-align: center;
+margin: 400px;
+}
+
+p {
+    margin: 30px;
+}
+
+li {
+    margin: 30px;
+    
+}
+
+.wrapper {
+    width: 100%;
+    margin: 0 auto;
+}
+
+main {
+    display: block;
+    background: #640505;
+}
+
+.container {
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 30px;
+    animation: surgir 2s ease-in-out;
+    animation-timeline: view ();
+    animation-range: cover 0 cover 30%;
+
+}
+
+section.modulo p{
+    margin-bottom: 30px;
+    text-align: justify;
+    font-size: 1.3em
+}
+
+section.modulo h2 {
+    margin-bottom: 40px;
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    text-align: center;
+}
+
+section.modulo.content{
+    padding: 40px 0;
+    background:#640505 ;
+    
+}
+
+section.modulo.parallax{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh !important;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+section.modulo.parallax h1{
+    color: #fff;
+    text-align: center;
+    font-size: 70px;
+    text-transform: uppercase;
+    text-shadow: 7px 7px 7px #000000e3;
+    z-index: 50;
+}
+
+
+section.modulo.parallax::after{
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;z-index: 8;
+    background: linear-gradient(to bottom, rgba(0,0,0,0)0, rgba(0,0,0,0) 40%, #000000 120%);
+}
+
+
+
+section.modulo.parallax-1{
+ background-image: url(https://sinasefe.org.br/memoria/wp-content/uploads/sites/7/2016/11/conscnegra2016site.png);
+}
+
+section.modulo.parallax-2{
+background-image: url(https://s2.static.brasilescola.uol.com.br/img/2019/11/movimento-negro.jpg);
+}
+
+section.modulo.parallax-3{
+background-image: url(https://www.cut.org.br/img/cache/ogimage/system/uploads/news/922b9e948b46e16afa0a56cabbbea90d/cover/punho-cerrado.jpg);
+}
+
+@keyframes surgir {
+    from{
+translate: -100vw 0;
+color: #000000;
+opacity: 1;
+    }
+
+    to{
+translate: 0 0;
+color: #fff;
+opacity: 1;
+    }
+
+}
+
+
+@media all and (max-width: 860px) {
+    section.modulo p{
+        margin-bottom: 10px;
+        text-align: center;
+        font-size: 1em;}
+
+        section.modulo h1 {font-weight: 400;
+            color: #ffffff;
+            background-color: #0000007a;
+            border-radius: 40px;
+            text-align: center;
+            margin: 20px;
+
+        }
+    }
+
+    section.modulo.parallax h1{
+        color: #fff;
+        text-align: center;
+        font-size: 3em;
+        text-transform: uppercase;
+        text-shadow: 7px 7px 7px #00000097;
+        z-index: 50;
+    }
+
+    section.modulo.content{
+        width: 90%;
+    }
+
+    section.modulo.parallax-1 {
+        background-image: url(https://sinasefe.org.br/memoria/wp-content/uploads/sites/7/2016/11/conscnegra2016site.png);
+       }
+
+       .galeria{
+        width: 100%;
+       }
+        
+
+
+
+
+.galeria{
+    margin: 1em;
+    display: flex;
+    height: 20em;
+    gap: 0.3em;
+}
+
+.galeria div{
+    flex: 1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 0.6s cubic-bezier(0.50, 1, 0.320, 1);
+}
+
+.galeria div:hover{
+    flex: 5;
+
+}
+
+.galeria:hover div:not(:hover){
+    filter: blur(0.1em) grayscale(45%) ;
+    
+}
